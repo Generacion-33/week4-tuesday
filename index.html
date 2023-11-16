@@ -5,12 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formularios</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
   <header>
     <h1>Formularios</h1>
+    <i class='bx bx-pyramid'></i>
+    <i class='bx bxs-hourglass-bottom'></i>
+    <i class='bx bxl-whatsapp-square bx-flip-vertical bx-burst' style='color:#b11f1f'></i>
   </header>
 
   <br>
@@ -34,9 +38,174 @@
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" placeholder="Ingrese su email" tabindex="2">
 
+      <br><br>
+
+      <label for="password">Contraseña:</label>
+      <input type="password" placeholder="Ingrese su contraseña" name="password" required id="password">
+
+      <br><br>
+
+      <fieldset>
+        <legend>Fechas</legend>
+
+        <label for="date">Fecha de nacimiento: </label>
+        <input type="date" id="date" name="date" required>
+
+        <br><br>
+
+        <label for="datetime-local">Fecha de nacimiento y hora: </label>
+        <input type="datetime-local" id="datetime-local" name="datetime-local">
+
+        <br><br>
+
+        <label for="month">Ingrese el mes: </label>
+        <input type="month" id="month" name="month">
+
+        <br><br>
+
+        <label for="week">Ingrese la semana: </label>
+        <input type="week" id="week" name="week">
+
+      </fieldset>
+
+      <br><br>
+
+      <fieldset>
+        <legend>Otros inputs</legend>
+
+        <label for="age">Ingrese la edad:</label>
+        <input type="number" placeholder="Ingrese su edad" name="age" id="age" min="10" max="100" step="10">
+
+        <br><br>
+
+        <label for="color">Ingrese su color favorito:</label>
+        <input type="color" name="color" id="color">
+
+        <br><br>
+
+        <label for="file">Ingrese lo que esta buscando:</label>
+        <input type="search" name="search" id="search" placeholder="Ingrese aquí lo que busca">
+
+        <br><br>
+
+        <label for="file">Ingrese un archivo:</label>
+        <input type="file" name="file" id="file">
+
+
+        <br><br>
+
+        <label for="file-multiple">Ingrese varios archivos:</label>
+        <input type="file" multiple name="file-multiple" id="file-multiple">
+
+        <br><br>
+
+        <label for="range">Ingrese el volumen</label>
+        <input type="range" name="range" id="range" required>
+
+
+
+
+
+
+      </fieldset>
+
+      <br><br>
+
+      <fieldset>
+        <legend>Checkbox (Multiples opciones) - Lenguajes que tu dominas: </legend>
+
+        <label for="js">JavaScript:</label>
+        <input type="checkbox" id="js" name="lenguaje1" value="JavaScript">
+
+        <br> <br>
+
+        <label for="html">HTML:</label>
+        <input type="checkbox" id="html" name="lenguaje2" value="HTML">
+
+        <br> <br>
+
+        <label for="css">CSS:</label>
+        <input type="checkbox" id="css" name="lenguaje3" value="CSS">
+
+      </fieldset>
+
+      <br><br>
+
+      <fieldset>
+        <legend>Unica selección - Perfil del programador</legend>
+
+        <label for="backend">Backend:</label>
+        <input type="radio" id="backend" name="perfil" value="Backend">
+
+        <br><br>
+
+        <label for="frontend">Frontend:</label>
+        <input type="radio" id="frontend" name="perfil" value="Frontend">
+
+
+        <br><br>
+
+        <label for="fullstack">Fullstack:</label>
+        <input type="radio" id="fullstack" name="perfil" value="Fullstack">
+
+      </fieldset>
+
+      <br><br>
+
+      <fieldset>
+        <legend>Textarea</legend>
+
+        <label for="message"></label>
+        <textarea name="message" id="message" cols="30" rows="10" maxlength="200"></textarea>
+      </fieldset>
+
+      <br><br>
+
+      <fieldset>
+
+        <legend>Select</legend>
+        <select name="perfil" required>
+          <option disabled selected>Seleccione una opcion</option>
+          <option value="fullstack">Fullstack</option>
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+        </select>
+
+      </fieldset>
+
+      <br><br>
+
+      <fieldset>
+        <legend>Autcomplete - details</legend>
+
+        <label for="paises">Paises de America</label>
+        <input list="countries" placeholder="Ingrese su pais" required id="paises">
+
+        <datalist id="countries">
+          <option value="Argentina"></option>
+          <option value="Bolivia"></option>
+          <option value="Chile"></option>
+          <option value="Brasil"></option>
+          <option value="Peru"></option>
+          <option value="Mexico"></option>
+          <option value="Colombia"></option>
+          <option value="Ecuador"></option>
+          <option value="Costa Rica"></option>
+          <option value="Republica Dominicana"></option>
+          <option value="Cuba"></option>
+          <option value="El Salvdor"></option>
+
+        </datalist>
+      </fieldset>
+
+
       <!-- botones -->
       <h3>Botones</h3>
-      <input type="submit" value="📤enviar formulario📩">
+      <!-- <input type="submit" value="📤enviar formulario📩">
+      <input type="reset" value="Reset"> -->
+
+      <button type="submit"> Enviar formulario <i class='bx bxs-send'></i></button>
+      <button type="reset"> Resetear el formulario <i class='bx bx-reset'></i></button>
 
     </form>
 
